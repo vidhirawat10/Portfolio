@@ -58,46 +58,6 @@
     background-color: #383737;
   }
   
-  
-
-
-
-  /* Header 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d6cbb4;
-    padding-bottom: 20px;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .buy-btn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .buy-btn:hover {
-    background-color: #383737;
-  }
-  /* Common Section Styling */
-.section {
-  max-width: 1000px;
-  padding: 15px 0px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
 /* Section 1 Styling */
 
 .section-1 {
@@ -105,7 +65,9 @@
   flex-direction: column;            
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1px;                  
+  flex-wrap: wrap;
+  max-width: 850px;
+  padding: 15px 0px;                  
   height: 50vh;                  
   box-sizing: border-box;
 }
@@ -113,8 +75,8 @@
 .section-1 .text-box {
   flex: 1 1 50%;
   background-color: #f6eedf;
-  height: 120px;
-  width: 63%;
+  height: 479px;
+  width: 565px;
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
@@ -132,11 +94,58 @@
 }
 
 .section-1 .image-box img {
-  max-width: 120%;
-  height: 40%;
-  border-radius: 10px;
+  width: 260px;
+  height: 376px;
+  border-radius: 20px;
 }
 
-   
+/* Section 2 Styling */
 
-  
+.section-2 {
+  display: flex;                 
+  flex-direction: column;            
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 930px;
+  padding: 15px 0px;                  
+  height: 50vh;                  
+  box-sizing: border-box;
+}
+
+.section-2 .text-box2 {
+  flex: 1 1 50%;
+  background-color: #f6eedf;
+  height: 351px;
+  width: 448px;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.section-2 .text-box2 h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.3;
+}
+
+.section-2 .text-box2 em {
+  font-style: italic;
+}
+
+.section-2 .text-box2-2 {
+  flex: 1 1 50%;
+  background-color: #f6eedf;
+  margin-top: 40px;
+  height: 351px;
+  width: 448px;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+
