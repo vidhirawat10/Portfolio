@@ -66,17 +66,19 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 850px;
+  max-width: 1600px;
   padding: 15px 0px;                  
   height: 50vh;                  
   box-sizing: border-box;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .section-1 .text-box {
   flex: 1 1 50%;
   background-color: #f6eedf;
   height: 479px;
-  width: 565px;
+  width: 530px;
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
@@ -99,6 +101,16 @@
   border-radius: 20px;
 }
 
+.section-1 .skills {
+  flex: 1 1 50%;
+  background-color: #f6eedf;
+  height: 500px;
+  width: 650px;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
 /* Section 2 Styling */
 
 .section-2 {
@@ -107,10 +119,12 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 930px;
+  max-width: 1500px;
   padding: 15px 0px;                  
   height: 50vh;                  
   box-sizing: border-box;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .section-2 .text-box2 {
@@ -145,7 +159,26 @@
   box-sizing: border-box;
 }
 
+.section-2 .projects {
+  flex: 1 1 50%;
+  background-color: #f6eedf;
+  height: 500px;
+  width: 530px;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
 
+/* Footer */
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #f6eedf;
+  }
 
-
-
+  .footer h3{
+  line-height: 1.3;
+  }
