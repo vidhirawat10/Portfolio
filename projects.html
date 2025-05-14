@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+#projects {
+  padding: 4rem 0;
+  background-color: #0f0f0f;
+}
+
+.heading {
+  text-align: center;
+  color: #f0e9db;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: bold;
+}
+
+.projects-section {
+  padding: 4rem 0;
+  background-color: #f0e9db; 
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center; 
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: white; 
+  margin-bottom: 2rem;
+  text-align: center; 
+}
+
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  color: #f0e9db;
+  border: 2px solid #f0e9db;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(293px, 1fr)); 
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd; 
+  padding: 20px;
+  color: lavender;
+  border-radius: 8px; 
+  box-shadow: 0px 0px 5px #FFC0CB; 
+  transition: transform 0.2s; 
+}
+
+.project-card:hover {
+  transform: translateY(-5px); 
+}
+
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 1rem;
+}
+
+.project-tech span {
+  background-color: #0c1026;
+  padding: 3px 8px;
+  border: 2px solid #61dafb;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: whitesmoke;
+}
+
+.project-buttons {
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center; 
+}
+
+.project-buttons button {
+  margin-left: 5px; 
+  padding: 5px 10px;
+  background-color: #f0e9db; 
+  border: 2px solid blue;
+  border-radius: 5px;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+        <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="heading">Projects</h2><br>
+        <p class="section-subtitle">I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.</p>
+    
+        <div class="projects-filter">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="major">MAJOR</button>
+          <button class="filter-button" data-filter="web-apps">WEB APP'S</button>
+          <button class="filter-button" data-filter="machine-learning">MACHINE LEARNING</button>
+        </div>
+    
+        <div class="projects-grid">
+    
+          <div class="project-card" data-category="major">
+            <h3>Beautelligent</h3>
+            <p>AI-powered skincare analysis and personalized recommendations.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Machine learning</span>
+              <span>Keras</span>
+              <span>Eslint</span>
+              <span>Sci-kit</span>
+              <span>tensorflow</span>
+              <span>React Js</span>
+              <span>MongoDb</span>
+              <span>Node Js</span>
+              <span>Express Js</span>
+            </div>
+            <div class="project-buttons">
+              <button onclick="viewCode('beautelligent')">View Code</button>
+              <button onclick="viewLiveApp('beautelligent')">View Live App</button>
+            </div>
+          </div>
+    
+          <div class="project-card" data-category="major">
+           <h3>DrapeVibe</h3>
+            <p>Virtual fashion stylist with AI-driven outfit suggestions.</p>
+            <div class="project-tech">
+              <span>React Js</span>
+              <span>MongoDb</span>
+              <span>Node Js</span>
+              <span>Express Js</span>
+              <span>Redux</span>
+            </div><br><br><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('drpaevibe')">View Code</button>
+              <button onclick="viewLiveApp('drpaevibe')">View Live App</button>
+            </div>
+          </div>
+    
+          <div class="project-card" data-category="major">
+           <h3>Nyay Search</h3>
+            <p>AI-based legal research and case law search platform.</p>
+            <div class="project-tech">
+              <span>React Us</span>
+              <span>MongoDb</span>
+              <span>Node Js</span>
+              <span>Express Js</span>
+              <span>Redux</span>
+              <span>OpenAl</span>
+            </div><br><br><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('nyaysearch')">View Code</button>
+              <button onclick="viewLiveApp('nyaysearch')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="web-apps">
+            <h3>Netflix Clone</h3>
+            <p>A responsive streaming platform UI with movie browsing and playback features.</p>
+            <div class="project-tech">
+              <span>React</span> <span>Node.js</span>
+            </div><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('netflix')">View Code</button>
+              <button onclick="viewLiveApp('netflix')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="web-apps">
+            <h3>E-Book Store</h3>
+            <p>A web platform for browsing, purchasing, and reading e-books online.</p>
+            <div class="project-tech">
+              <span>HTML</span> <span>CSS</span> <span>JS</span>
+            </div><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('bookstore')">View Code</button>
+              <button onclick="viewLiveApp('bookstore')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="web-apps">
+            <h3>Pizza Website</h3>
+            <p>An interactive pizza ordering website with customizations and online payments.</p>
+            <div class="project-tech">
+              <span>HTML</span> <span>CSS</span> <span>JS</span> <span>React</span> <span>Node.js</span> <span>MongoDB</span>
+            </div><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('pizza')">View Code</button>
+              <button onclick="viewLiveApp('pizza')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="web-apps">
+            <h3>Recipe Search App</h3>
+            <p>A web app that finds recipes based on ingredients and dietary preferences.</p>
+            <div class="project-tech">
+              <span>HTML</span> <span>CSS</span> <span>JS</span> <span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Spoonacular API</span>
+            </div><br><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('recipe')">View Code</button>
+              <button onclick="viewLiveApp('recipe')">View Live App</button>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="machine-learning">
+            <h3>Real-Eyes</h3>
+            <p>AI based web-app for detection of deepfake audios and videos</p>
+            <div class="project-tech">
+              <span>Python</span> <span>TensorFlow</span> <span>OpenCV</span> <span>trimmedVGG</span> <span>React</span> <span>Flask</span>
+            </div><br><br><br><br><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('realeyes')">View Code</button>
+              <button onclick="viewLiveApp('realeyes')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="machine-learning">
+            <h3>Legal Document Summarization</h3>
+            <p>NLP-based AI for condensing lengthy legal texts into key insights</p>
+            <div class="project-tech">
+              <span>Python</span> <span>NLP Libraries</span> <span>React</span> <span>Flask</span> <span>MongoDB</span> 
+            </div><br><br><br>
+            <div class="project-buttons">
+              <button onclick="viewCode('legal')">View Code</button>
+              <button onclick="viewLiveApp('legal')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="machine-learning">
+            <h3>Facial Emotion Recognition</h3>
+            <p>ML model that detects human emotions from facial expressions.</p>
+            <div class="project-tech">
+              <span>Python</span> <span>TensorFlow</span> <span>OpenCV</span> <span>React</span> <span>Flask</span>
+            </div>
+            <div class="project-buttons">
+              <button onclick="viewCode('facial')">View Code</button>
+              <button onclick="viewLiveApp('facial')">View Live App</button>
+            </div>
+          </div>
+          <div class="project-card" data-category="machine-learning">
+            <h3>AI for Game Playing</h3>
+            <p>Reinforcement learning-based AI that plays and optimizes strategies in games.</p>
+            <div class="project-tech">
+              <span>Python</span> <span>TensorFlow</span> <span>React</span> <span>Flask</span> <span>(DQN)</span>
+            </div>
+            <div class="project-buttons">
+              <button onclick="viewCode('game')">View Code</button>
+              <button onclick="viewLiveApp('game')">View Live App</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
+</body>
+</html>
