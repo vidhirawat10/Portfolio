@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+      color: #bfbfbf;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 330px;
+      border-left: 3px solid #915eff;
+      padding-left: 30px;
+      max-width: 800px;
+    }
+
+    .experience-card {
+      background: #1f1f47;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-card::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: #915eff;
+      border-radius: 50%;
+      position: absolute;
+      left: -40px;
+      top: 20px;
+      border: 3px solid #0d0d2b;
+    }
+
+    .experience-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    .experience-card span {
+      display: block;
+      font-size: 0.9rem;
+      color: #a3a3c2;
+      margin-bottom: 15px;
+    }
+
+    .experience-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      color: #d1d1e0;
+    }
+
+    .skills {
+      margin-top: 10px;
+    }
+
+    .skills strong {
+      color: #ffffff;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: #292952;
+      color: #bfbfff;
+      padding: 5px 10px;
+      margin: 5px 5px 0 0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Experience</h1>
+  <p class="subtitle">My work experience as a software engineer and working on different companies and projects.</p>
+
+  <div class="timeline">
+    <div class="experience-card">
+      <h3>Data Science and Machine Learning Internship</h3>
+      <span>YBI Foundation | July 2024 - October 2024</span>
+      <p>Worked on developing an ML model for image classification using annotated input images, along with data analysis and performance evaluation of the model and its predictions. Demonstrated practical skills in ML pipelines and data-driven decision-making.</p>
+      <div class="skills">
+        <strong>Skills:</strong>
+        <span>Python</span><span>Machine Learning</span><span>Image Classification</span><span>Data Preprocessing & Annotation</span>
+        <span>Data Analysis & Visualization</span><span>ML Pipelines</span><span>Reporting & Analysis</span><span>Scikit-learn, TensorFlow, Keras</span><span>Problem Solving & Data-driven Decision Making</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
