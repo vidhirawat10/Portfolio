@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Grid</title>
+    <style>
+      body {
+        background-color: #0f0f0f;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .box {
+        border: 2px solid #f0e9db;
+        padding: 15px;
+        background-color: #0f0f0f;
+        flex-shrink: 0;
+        border-radius: 20px #f0e9db;
+      }
+
+      .programming,
+      .others {
+        width: 307px;
+        height: 565px;
+      }
+
+      .webdev {
+        width: 300px;
+        height: 565px;
+      }
+
+      .datascience {
+        width: 300px;
+      }
+
+      h2 {
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .grid.small {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skill-icon {
+        margin-top: 15px;
+        border-radius: 8px;
+        text-align: center;
+        width: 100px;
+        transition: transform 0.3s ease;
+      }
+
+      .skill-icon:hover {
+        transform: scale(1.05);
+      }
+
+      .skill-icon img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .skill-icon span {
+        display: block;
+        font-size: 14px;
+        color: #0f0f0f;
+      }
+
+      .grid.medium {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .item1 {
+        width: 100px;
+        height: 100px;
+        background-color: #f0e9db;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .item1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #0f0f0f;
+      }
+
+      .item {
+        width: 90px;
+        height: 90px;
+        background-color: #f0e9db;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        border-radius: 5px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #0f0f0f;
+      }
+
+      .lines {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .line {
+        height: 125px;
+        width: 90%;
+        margin-left: 15px;
+        background-color: #f0e9db;
+        color: #0f0f0f;
+        border-radius: 4px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .line:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #0f0f0f;
+      }
+
+      .line p {
+        font-size: 14px;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-align: left;
+        margin-left: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section="new">
+    <div class="container">
+      <div class="box programming">
+        <h2>Programming Language</h2>
+        <div class="grid small">
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/python-5.svg" alt="Python" />
+              <span>Python</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/c.svg" alt="C" />
+              <span>C</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/c++.svg" alt="C++" />
+              <span>C++</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/java-14.svg" alt="Java" />
+              <span>Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="box webdev">
+        <h2>Web Development</h2>
+        <div class="grid medium">
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/html-1.svg" alt="Python" />
+                <span>HTML5</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/css-3.svg" alt="Python" />
+                <span>CSS3</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/javascript-1.svg" alt="Python" />
+                <span>JavaScript</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/react-2.svg" alt="Python" />
+                <span>ReactJS</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/nodejs-2.svg" alt="Python" />
+                <span>Node JS</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/nodejs-3.svg" alt="Python" />
+                <span>ExpressJS</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/mongodb-icon-1.svg" alt="Python" />
+                <span>MongoDB</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/mysql-2.svg" alt="Python" />
+                <span>My SQL</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/firebase-1.svg" alt="Python" />
+                <span>Firebase</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/tailwind-css-2.svg" alt="Python" />
+                <span>TailwindCSS</span>
+              </div>
+          </div>
+          <div class="item">
+            <div class="skill-icon">
+                <img src="./assets/bootstrap-5-1.svg" alt="Python" />
+                <span>Bootstrap</span>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box datascience">
+        <h2>Data Science</h2>
+        <div class="lines">
+          <div class="line">
+            <p>
+              <b>Programming & Scripting :</b><br>
+              Python, R, SQL, Java<br>
+              Jupyter Notebook, Google Colab
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <b>ML & Statistics:</b><br>
+              Scikit-learn, TensorFlow, Keras, XGBoost<br>
+              Supervised & Unsupervised Learning<br>
+              Probability, Distributions, Hypothesis Testing
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <b>Data Handling & Analysis :</b><br>
+              Pandas, NumPy, Excel, SQL<br>
+              Data Cleaning, Feature Engineering, Preprocessing
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <b>Data Visualization :</b><br>
+              Matplotlib, Seaborn, Plotly<br>
+              Power BI, Tableau<br>
+              Creating dashboards & displaying data
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="box others">
+        <h2>Others</h2>
+        <div class="grid small">
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/git.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/github.png" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/vsc.svg" alt="VS Code" />
+              <span>VS Code</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/colab.png" alt="Google Colab" />
+              <span>Google Colab</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/netlify.svg" alt="Netlify" />
+              <span>Netlify</span>
+            </div>
+          </div>
+          <div class="item1">
+            <div class="skill-icon">
+              <img src="./assets/postman.svg" alt="Postman" />
+              <span>Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
