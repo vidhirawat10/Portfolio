@@ -1,148 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Vidhi Rawat</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0f0f0f;
-      color: #f0e9db;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Overview</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .fixed-border {
-      position: fixed;
-      left: 0;
-      width: 100%;
-      height: 30px; 
-      background-color: #f0e9db; 
-      z-index: 1000;
-   }
-
-   .top-border {
-     top: 0;
-   }
-
-   .bottom-border {
-     bottom: 0;
-   }
-
-
-    .about-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 80px;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    .about-text, .about-summary {
-      width: 30%;
-    }
-
-    .about-text h1 {
-     font-size: 48px;
-     font-weight: 500;
-     color: white;
-    }
-
-    .about-text h2 {
-     font-size: 60px;
-     font-weight: 700;
-     color: #f0e9db;
-    }
-
-    .about-text p {
-     font-size: 42px;
-     font-weight: 600;
-     line-height: 1.6;
-     color: white;
-    }
-
-    .about-image {
-      width: 30%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-image img {
-      width: 480px;
-      height: 600px;
-    }
-
-    .about-summary p {
-      font-size: 20px;
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    #element{
-        color: #f0e9db;
-    }
-
-    @media (max-width: 900px) {
-      .about-section {
+      body {
+        background-color: #0f0f1a;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        min-height: 100vh;
+        display: flex;
         flex-direction: column;
-        gap: 40px;
-        padding: 40px 20px;
-      }
-
-      .about-text, .about-image, .about-summary {
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
         text-align: center;
       }
 
-      .about-summary p {
-        text-align: center;
+      nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <section class="about-section">
-    <div class="fixed-border top-border"></div>
-    <!-- Left: Intro Text -->
-    <div class="about-text">
-      <h1>Hi, there !!</h1>
-        <h2>I'm Vidhi Rawat</h2>
-        <p> A passionate<br>
-           <span id="element"></span>
-        </p>
-        <span id="element"></span>
+      nav a {
+        color: #ccc;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size: 0.9em;
+      }
+
+      nav a:hover {
+        color: #fff;
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #f0e9db;
+      }
+
+      h2 {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin: 10px 0;
+      }
+
+      h4 {
+        font-size: 1em;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #dcdcdc;
+        max-width: 800px;
+        margin: 20px auto;
+        line-height: 1.6;
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        animation: floatIn 1.2s ease-out;
+      }
+
+      @keyframes floatIn {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .card {
+        background: #1a1a2e;
+        border: 2px solid transparent;
+        padding: 25px;
+        border-radius: 16px;
+        width: 220px;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .card:hover {
+        border-color: #4a00e0;
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .card-title {
+        font-size: 1em;
+        font-weight: 600;
+      }
+
+      #stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #0f0f1a;
+      }
+
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 2em;
+        }
+
+        .card {
+          width: 45%;
+        }
+
+        .logo,
+        nav {
+          font-size: 0.9em;
+          top: 10px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .card {
+          width: 100%;
+        }
+
+        h2 {
+          font-size: 1.7em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        nav {
+          position: static;
+          margin-bottom: 10px;
+        }
+
+        .logo {
+          position: static;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="stars"></canvas>
+
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+
+    <div class="logo">Vidhi | Portfolio</div>
+
+    <h4>Hi, there !!</h4>
+    <h2>I'm Vidhi Rawat</h2>
+    <p>
+      I'm Vidhi Rawat, a tech enthusiast with a passion for Full-Stack
+      Development, Data Analysis, and Machine Learning. I enjoy building clean,
+      user-friendly web interfaces while leveraging data to drive smart,
+      impactful solutions. With a strong foundation in Python, JS, and ML tools,
+      I blend creativity and logic to craft projects that are both visually
+      engaging and data-driven.. I'm a quick learner and collaborate closely
+      with teams to build scalable, efficient, and user-friendly solutions
+    </p>
+
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://img.icons8.com/3d-fluency/94/source-code.png"
+          alt="Full Stack"
+        />
+        <div class="card-title">Full-Stack Development</div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/8676/8676950.png"
+          alt="Data Analysis"
+        />
+        <div class="card-title">Data Analysis</div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/8637/8637099.png"
+          alt="Machine Learning"
+        />
+        <div class="card-title">Machine Learning</div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn-icons-png.freepik.com/256/4661/4661361.png"
+          alt="Project Management"
+        />
+        <div class="card-title">Project Management</div>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.icons8.com/3d-fluency/94/design.png"
+          alt="UI/UX"
+        />
+        <div class="card-title">UI-UX Designing</div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/digital-marketing-60/512/SMO-512.png"
+          alt="SMO"
+        />
+        <div class="card-title">SMO</div>
+      </div>
     </div>
-
-    <!-- Center: Profile Image -->
-    <div class="about-image">
-      <img src="./assets/Vidhi Rawat.gif" alt="Vidhi Rawat Profile" />
-    </div>
-
-    <!-- Right: Profile Summary -->
-    <div class="about-summary">
-      <p>
-        <i>
-<b>A CURIOUS CODER ENTHUSIASTIC ABOUT WEB DEVELOPMENT
-& DATA SCIENCE, BUILDING PRODUCTS THAT CATER TO YOUR NEEDS</b><br>
-💡Dedicated and enthusiastic individual with a strong passion for building interactive web experiences and solving data-driven problems.<br>
-🖥️Experienced in both front-end development and machine learning.<br>
-🧠Strive to combine design thinking with data science to create solutions that are both intelligent and user-friendly.<br>
-🛠️Enjoy building elegant interfaces and training predictive models.<br>
-📚Passionate about learning new technologies and bringing ideas to life.</i>
-      </p>
-    </div>
-
-  </section>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-    var typed = new Typed('#element', {
-      strings: ['<i>Web Developer</i>', '<i>and Data Science Enthusiast.</i>'],
-      typeSpeed: 50,
-    });
-  </script>
-  <div class="fixed-border bottom-border"></div>
-</body>
+      const canvas = document.getElementById("stars");
+      const ctx = canvas.getContext("2d");
+
+      let stars = [];
+      let starCount = 120;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      function createStars() {
+        stars = [];
+        for (let i = 0; i < starCount; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 1.5,
+            velocity: Math.random() * 0.3 + 0.1,
+            alpha: Math.random(),
+          });
+        }
+      }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+          ctx.fill();
+
+          star.y += star.velocity;
+          if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+          }
+        }
+        requestAnimationFrame(drawStars);
+      }
+
+      createStars();
+      drawStars();
+    </script>
+  </body>
 </html>
