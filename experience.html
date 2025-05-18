@@ -13,70 +13,72 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
+      background-color: #0f0f1a;
       color: #ffffff;
       padding: 50px 20px;
     }
 
     h1 {
+      font-size: 3em;
+      font-weight: 800;
+      margin: 10px 0;
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #ffffff;
     }
 
     p.subtitle {
+      font-size: 1.1em;
+      color: #dcdcdc;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6;
       text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 50px;
-      color: #bfbfbf;
     }
 
     .timeline {
       position: relative;
-      margin-left: 330px;
       border-left: 3px solid #f0e9db;
-      padding-left: 30px;
+      padding-left: 25px;
       max-width: 800px;
+      margin: 0 auto;
     }
 
     .experience-card {
-      background: #f0e9db;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 20px;
+      background: #1a1a2e;
+      border: 2px solid transparent;
+      padding: 25px;
+      border-radius: 16px;
       margin-bottom: 40px;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
+      transition: border-color 0.3s ease, transform 0.3s ease;
     }
 
     .experience-card:hover {
+      border-color: #4a00e0;
       transform: translateY(-5px);
     }
 
     .experience-card::before {
       content: '';
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       background-color: #f0e9db;
       border-radius: 50%;
       position: absolute;
       left: -40px;
       top: 20px;
-      border: 3px solid #0d0d2b;
+      border: 3px solid #0f0f1a;
     }
 
     .experience-card h3 {
       font-size: 1.4rem;
       margin-bottom: 5px;
-      color: #0f0f0f;
+      color: #f0e9db;
     }
 
     .experience-card span {
       display: block;
       font-size: 0.9rem;
-      color: #0f0f0f;
+      color: #f0e9db;
       margin-bottom: 15px;
     }
 
@@ -84,7 +86,7 @@
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: 10px;
-      color: #0f0f0f;
+      color: #f0e9db;
     }
 
     .skills {
@@ -92,7 +94,7 @@
     }
 
     .skills strong {
-      color: #0f0f0f;
+      color: #f0e9db;
     }
 
     .skills span {
@@ -104,9 +106,58 @@
       border-radius: 8px;
       font-size: 0.9rem;
     }
+
+    #stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #0f0f1a;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2em;
+      }
+
+      p.subtitle {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+
+      .timeline {
+        border-left: 3px solid #f0e9db;
+        padding-left: 25px;
+      }
+
+      .experience-card {
+        padding: 20px;
+        margin-left: 0;
+      }
+
+      .experience-card::before {
+            left: -38px;
+    width: 16px;
+    height: 16px;
+      }
+
+      .skills span {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills span {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+      }
+    }
   </style>
 </head>
 <body>
+  <canvas id="stars"></canvas>
+
   <h1>Experience</h1>
   <p class="subtitle">My work experience as a software engineer and working on different companies and projects.</p>
 
@@ -121,7 +172,55 @@
         <span>Data Analysis & Visualization</span><span>ML Pipelines</span><span>Reporting & Analysis</span><span>Scikit-learn, TensorFlow, Keras</span><span>Problem Solving & Data-driven Decision Making</span>
       </div>
     </div>
-
   </div>
+
+  <script>
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+
+    let stars = [];
+    const starCount = 120;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < starCount; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          velocity: Math.random() * 0.3 + 0.1,
+          alpha: Math.random(),
+        });
+      }
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        ctx.fill();
+
+        star.y += star.velocity;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawStars);
+    }
+
+    createStars();
+    drawStars();
+  </script>
 </body>
 </html>
