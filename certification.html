@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Professional Certificates</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f0f1a;
-      color: white;
-      overflow-x: hidden;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Professional Certificates</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f0f1a;
+        color: white;
+        overflow-x: hidden;
+      }
 
-          nav {
+      nav {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -40,96 +40,96 @@
         color: #f0e9db;
       }
 
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-top: 30px;
-    }
+      h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 30px;
+      }
 
-    p {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #b3b3b3;
-    }
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #b3b3b3;
+      }
 
-    .carousel-container {
-      max-width: 90%;
-      margin: 40px auto;
-      position: relative;
-      overflow: hidden;
-    }
+      .carousel-container {
+        max-width: 90%;
+        margin: 40px auto;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .carousel {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
 
-    .card {
-      min-width: 300px;
-      max-width: 300px;
-      background: #161b22;
-      margin: 0 10px;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
+      .card {
+        min-width: 300px;
+        max-width: 300px;
+        background: #161b22;
+        margin: 0 10px;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
 
-    .card h3 {
-      margin: 10px 0 5px;
-    }
+      .card h3 {
+        margin: 10px 0 5px;
+      }
 
-    .card p {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
+      .card p {
+        font-size: 0.9rem;
+        color: #ccc;
+      }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-    }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+      }
 
-    .tag {
-      background-color: #238636;
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-size: 0.75rem;
-    }
+      .tag {
+        background-color: #238636;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+      }
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.1);
-      color: white;
-      border: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      padding: 10px 15px;
-      z-index: 10;
-      border-radius: 50%;
-    }
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 10px 15px;
+        z-index: 10;
+        border-radius: 50%;
+      }
 
-    .arrow:hover {
-      background: rgba(255,255,255,0.3);
-    }
+      .arrow:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
 
-    .left {
-      left: 0;
-    }
+      .left {
+        left: 0;
+      }
 
-    .right {
-      right: 0;
-    }
+      .right {
+        right: 0;
+      }
 
-          #stars {
+      #stars {
         position: fixed;
         top: 0;
         left: 0;
@@ -137,15 +137,15 @@
         background-color: #0f0f1a;
       }
 
-    @media (max-width: 768px) {
-      .card {
-        min-width: 80%;
+      @media (max-width: 768px) {
+        .card {
+          min-width: 80%;
+        }
       }
-    }
-  </style>
-</head>
-<body>
-      <canvas id="stars"></canvas>
+    </style>
+  </head>
+  <body>
+    <canvas id="stars"></canvas>
 
     <nav>
       <a href="index.html">Home</a>
@@ -153,113 +153,130 @@
 
     <div class="logo">Vidhi | Portfolio</div>
 
-  <h2>Professional Certificates</h2>
-  <p>Continuous learning and professional development through industry-recognized certifications.</p>
+    <h2>Professional Certificates</h2>
+    <p>
+      Continuous learning and professional development through
+      industry-recognized certifications.
+    </p>
     <button class="arrow left" onclick="moveCarousel(-1)">&#8592;</button>
-  <div class="carousel-container">
-    <div class="carousel" id="carousel">
-      <!-- Repeatable Certificate Cards -->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- Repeatable Certificate Cards -->
 
-            <div class="card">
-        <img src="assets/IDS.png" alt="Certificate 1">
-        <h3>Introduction to Data Science</h3>
-        <p>Cisco Networking Academy</p>
-        <div class="tags">
-          <span class="tag">Data Careers</span>
-          <span class="tag">Artificial Intelligence and Machine Learning Concepts</span>
-          <span class="tag">Data Collection</span>
-          <span class="tag">Basics of Analytics</span>
+        <div class="card">
+          <img src="assets/IDS.png" alt="Certificate 1" />
+          <h3>Introduction to Data Science</h3>
+          <p>Cisco Networking Academy</p>
+          <div class="tags">
+            <span class="tag">Data Careers</span>
+            <span class="tag"
+              >Artificial Intelligence and Machine Learning Concepts</span
+            >
+            <span class="tag">Data Collection</span>
+            <span class="tag">Basics of Analytics</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/DAE.png" alt="Certificate 2">
-        <h3>Data Analytics Essential</h3>
-        <p>Cisco Networking Academy</p>
-        <div class="tags">
-          <span class="tag">Statistics</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Data Visualization</span>
+        <div class="card">
+          <img src="assets/DAE.png" alt="Certificate 2" />
+          <h3>Data Analytics Essential</h3>
+          <p>Cisco Networking Academy</p>
+          <div class="tags">
+            <span class="tag">Statistics</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Data Visualization</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/nptel.png" alt="Certificate 3">
-        <h3>Introduction to Machine Learning</h3>
-        <p>NPTEL</p>
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">Numpy</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">Keras</span>
-          <span class="tag">Tensorflow</span>
+        <div class="card">
+          <img src="assets/nptel.png" alt="Certificate 3" />
+          <h3>Introduction to Machine Learning</h3>
+          <p>NPTEL</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Numpy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Keras</span>
+            <span class="tag">Tensorflow</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/networking.png" alt="Certificate 5">
-        <h3>Networking Essentials</h3>
-        <p>Cisco Networking Academy</p>
-        <div class="tags">
-          <span class="tag">Networking Fundamentals</span>
-          <span class="tag">IP Addressing and Subnetting</span>
-          <span class="tag">Network Security Fundamentals</span>
-          <span class="tag">Wireless LAN Concepts</span>
-          <span class="tag">Network Device Configuration</span>
-          <span class="tag">SD-WAN</span>
+        <div class="card">
+          <img src="assets/networking.png" alt="Certificate 4" />
+          <h3>Networking Essentials</h3>
+          <p>Cisco Networking Academy</p>
+          <div class="tags">
+            <span class="tag">Networking Fundamentals</span>
+            <span class="tag">IP Addressing and Subnetting</span>
+            <span class="tag">Network Security Fundamentals</span>
+            <span class="tag">Wireless LAN Concepts</span>
+            <span class="tag">Network Device Configuration</span>
+            <span class="tag">SD-WAN</span>
+          </div>
         </div>
-      </div>
 
-       <div class="card">
-        <img src="assets/OCJ.png" alt="Certificate 6">
-        <h3>Java : Learning</h3>
-        <p>Softpro</p>
-        <div class="tags">
-          <span class="tag">Java Syntax and Fundamentals</span>
-          <span class="tag">Object-Oriented Programming (OOP)</span>
-          <span class="tag">Exception Handling</span>
-          <span class="tag">Multithreading and Concurrency</span>
-          <span class="tag">Java Servlets and JSP</span>
-          <span class="tag">JDBC</span>
+        <div class="card">
+          <img src="assets/OCJ.png" alt="Certificate 5" />
+          <h3>Java : Learning</h3>
+          <p>Softpro</p>
+          <div class="tags">
+            <span class="tag">Java Syntax and Fundamentals</span>
+            <span class="tag">Object-Oriented Programming (OOP)</span>
+            <span class="tag">Exception Handling</span>
+            <span class="tag">Multithreading and Concurrency</span>
+            <span class="tag">Java Servlets and JSP</span>
+            <span class="tag">JDBC</span>
+          </div>
         </div>
-      </div>
 
-            <div class="card">
-        <img src="assets/DSUI.png" alt="Certificate 4">
-        <h3>Digital Skills: User Experince</h3>
-        <p>Accenture</p>
-        <div class="tags">
-          <span class="tag">User Research</span>
-          <span class="tag">UI Design Principles</span>
-          <span class="tag">Interaction Design</span>
-          <span class="tag">Usability Testing</span>
-          <span class="tag">Cross-Functional Collaboration</span>
-          <span class="tag">Prototyping</span>
+        <div class="card">
+          <img src="assets/DSUI.png" alt="Certificate 6" />
+          <h3>Digital Skills: User Experince</h3>
+          <p>Accenture</p>
+          <div class="tags">
+            <span class="tag">User Research</span>
+            <span class="tag">UI Design Principles</span>
+            <span class="tag">Interaction Design</span>
+            <span class="tag">Usability Testing</span>
+            <span class="tag">Cross-Functional Collaboration</span>
+            <span class="tag">Prototyping</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/GDSC.png" alt="Certificate 7" />
+          <h3>Google Cloud Computing Foundations & Generative AI</h3>
+          <p>GDSC - ABESIT</p>
+          <div class="tags">
+            <span class="tag">Cloud Computing Fundamentals</span>
+            <span class="tag">Infrastructure in Google Cloud</span>
+            <span class="tag">Networking & Security in Google Cloud</span>
+            <span class="tag">Data, ML, and AI in Google Cloud</span>
+            <span class="tag">Generative AI Fundamentals</span>
+          </div>
         </div>
       </div>
     </div>
-   
-  </div>
-   <button class="arrow right" onclick="moveCarousel(1)">&#8594;</button>
+    <button class="arrow right" onclick="moveCarousel(1)">&#8594;</button>
 
-  <script>
-    let currentIndex = 0;
-    const carousel = document.getElementById("carousel");
-    const cardWidth = 480; // card width + margin
+    <script>
+      let currentIndex = 0;
+      const carousel = document.getElementById("carousel");
+      const cardWidth = 480; // card width + margin
 
-    function moveCarousel(direction) {
-      const totalCards = carousel.children.length;
-      const visibleCards = Math.floor(window.innerWidth / cardWidth);
-      const maxIndex = totalCards - visibleCards;
+      function moveCarousel(direction) {
+        const totalCards = carousel.children.length;
+        const visibleCards = Math.floor(window.innerWidth / cardWidth);
+        const maxIndex = totalCards - visibleCards;
 
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-      const offset = -currentIndex * cardWidth;
-      carousel.style.transform = `translateX(${offset}px)`;
-    }
+        const offset = -currentIndex * cardWidth;
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
 
       const canvas = document.getElementById("stars");
       const ctx = canvas.getContext("2d");
@@ -307,6 +324,6 @@
 
       createStars();
       drawStars();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
