@@ -2,338 +2,312 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skills & Technologies</title>
     <style>
-      body {
-        background-color: #0f0f0f;
-        color: white;
-        font-family: Arial, sans-serif;
+      * {
         margin: 0;
-        padding: 20px;
-        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f172a;
+        color: white;
       }
 
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 20px;
+      nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
       }
 
-      .box {
-        border: 2px solid #f0e9db;
-        padding: 15px;
-        background-color: #0f0f0f;
-        flex-shrink: 0;
-        border-radius: 20px #f0e9db;
+      nav a {
+        color: #ccc;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size: 0.9em;
       }
 
-      .programming,
-      .others {
-        width: 307px;
-        height: 565px;
+      nav a:hover {
+        color: #fff;
       }
 
-      .webdev {
-        width: 300px;
-        height: 565px;
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #f0e9db;
       }
 
-      .datascience {
-        width: 300px;
-      }
-
-      h2 {
-        font-size: 16px;
-        color: #ffffff;
+      .section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
         text-align: center;
-        margin-bottom: 10px;
+      }
+
+      .section h2 {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin: 10px 0;
+      }
+
+      .section p {
+        font-size: 1em;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
       }
 
       .grid {
         display: grid;
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
+        gap: 20px;
       }
 
-      .grid.small {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .skill-icon {
-        margin-top: 15px;
-        border-radius: 8px;
-        text-align: center;
-        width: 100px;
-        transition: transform 0.3s ease;
-      }
-
-      .skill-icon:hover {
-        transform: scale(1.05);
-      }
-
-      .skill-icon img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
-      }
-
-      .skill-icon span {
-        display: block;
-        font-size: 14px;
-        color: #0f0f0f;
-      }
-
-      .grid.medium {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .item1 {
-        width: 100px;
-        height: 100px;
-        background-color: #f0e9db;
-        border-radius: 5px;
-        margin-left: 30px;
-        margin-bottom: 40px;
-        margin-top: 20px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .item1:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 15px #0f0f0f;
-      }
-
-      .item {
-        width: 90px;
-        height: 90px;
-        background-color: #f0e9db;
-        margin-bottom: 15px;
-        margin-top: 15px;
-        border-radius: 5px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 15px #0f0f0f;
-      }
-
-      .lines {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .line {
-        height: 125px;
-        width: 90%;
-        margin-left: 15px;
-        background-color: #f0e9db;
-        color: #0f0f0f;
-        border-radius: 4px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .line:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 15px #0f0f0f;
-      }
-
-      .line p {
-        font-size: 14px;
-        line-height: 1.6;
-        word-wrap: break-word;
+      .card {
+        background-color: #1e293b;
+        border-radius: 16px;
+        padding: 24px;
+        max-width: 350px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
         text-align: left;
-        margin-left: 10px;
+        animation-name: dropIn;
+        animation-duration: 0.8s;
+        animation-fill-mode: both;
+        opacity: 0;
       }
 
+      @keyframes dropIn {
+        from {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .card:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .card:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .card:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .card:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+      .card:nth-child(5) {
+        animation-delay: 1s;
+      }
+      .card:nth-child(6) {
+        animation-delay: 1.2s;
+      }
+      .card:nth-child(7) {
+        animation-delay: 1.4s;
+      }
+
+      .card:hover {
+        border: 2px solid;
+        border-color: #4a00e0;
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .badge {
+        background-color: #0f172a;
+        color: #2dd4bf;
+        padding: 6px 12px;
+        border-radius: 9999px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      #stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #0f0f1a;
+      }
+
+      @media (max-width: 480px) {
+        .section h2 {
+          font-size: 2rem;
+        }
+
+        .section p {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <section="new">
-    <div class="container">
-      <div class="box programming">
-        <h2>Programming Language</h2>
-        <div class="grid small">
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/python-5.svg" alt="Python" />
-              <span>Python</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/c.svg" alt="C" />
-              <span>C</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/c++.svg" alt="C++" />
-              <span>C++</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/java-14.svg" alt="Java" />
-              <span>Java</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <canvas id="stars"></canvas>
 
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
 
-      <div class="box webdev">
-        <h2>Web Development</h2>
-        <div class="grid medium">
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/html-1.svg" alt="Python" />
-                <span>HTML5</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/css-3.svg" alt="Python" />
-                <span>CSS3</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/javascript-1.svg" alt="Python" />
-                <span>JavaScript</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/react-2.svg" alt="Python" />
-                <span>ReactJS</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/nodejs-2.svg" alt="Python" />
-                <span>Node JS</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/nodejs-3.svg" alt="Python" />
-                <span>ExpressJS</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/mongodb-icon-1.svg" alt="Python" />
-                <span>MongoDB</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/mysql-2.svg" alt="Python" />
-                <span>My SQL</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/firebase-1.svg" alt="Python" />
-                <span>Firebase</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/tailwind-css-2.svg" alt="Python" />
-                <span>TailwindCSS</span>
-              </div>
-          </div>
-          <div class="item">
-            <div class="skill-icon">
-                <img src="./assets/bootstrap-5-1.svg" alt="Python" />
-                <span>Bootstrap</span>
-              </div>
-          </div>
-        </div>
-      </div>
+    <div class="logo">Vidhi | Portfolio</div>
+    <section class="section">
+      <h2>Skills & Technologies</h2>
+      <p>
+        A comprehensive toolkit for building modern web applications from
+        concept to deployment.
+      </p>
 
-      <div class="box datascience">
-        <h2>Data Science</h2>
-        <div class="lines">
-          <div class="line">
-            <p>
-              <b>Programming & Scripting :</b><br>
-              Python, R, SQL, Java<br>
-              Jupyter Notebook, Google Colab
-            </p>
+      <div class="grid">
+        <div class="card">
+          <h3>🖥️ Programming Languages</h3>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Java</span>
+            <span class="badge">C</span>
+            <span class="badge">C++</span>
+            <span class="badge">R</span>
           </div>
-          <div class="line">
-            <p>
-              <b>ML & Statistics:</b><br>
-              Scikit-learn, TensorFlow, Keras, XGBoost<br>
-              Supervised & Unsupervised Learning<br>
-              Probability, Distributions, Hypothesis Testing
-            </p>
+        </div>
+        <div class="card">
+          <h3>🖥️ Frontend</h3>
+          <div class="badges">
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">Material UI</span>
+            <span class="badge">Bootstrap</span>
           </div>
-          <div class="line">
-            <p>
-              <b>Data Handling & Analysis :</b><br>
-              Pandas, NumPy, Excel, SQL<br>
-              Data Cleaning, Feature Engineering, Preprocessing
-            </p>
+        </div>
+
+        <div class="card">
+          <h3>🛠️ Backend</h3>
+          <div class="badges">
+            <span class="badge">Node.js</span>
+            <span class="badge">Express</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">MongoDB</span>
+            <span class="badge">Authentication</span>
           </div>
-          <div class="line">
-            <p>
-              <b>Data Visualization :</b><br>
-              Matplotlib, Seaborn, Plotly<br>
-              Power BI, Tableau<br>
-              Creating dashboards & displaying data
-            </p>
+        </div>
+
+        <div class="card">
+          <h3>🗄️ Database</h3>
+          <div class="badges">
+            <span class="badge">MongoDB</span>
+            <span class="badge">Firebase</span>
+            <span class="badge">MySQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🧰 Tools</h3>
+          <div class="badges">
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">Docker</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">Postman</span>
+            <span class="badge">npm/yarn</span>
+            <span class="badge">MongoDB Compass</span>
+            <span class="badge">Vercel</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>⚙️ Website Operations</h3>
+          <div class="badges">
+            <span class="badge">SEO</span>
+            <span class="badge">Performance Optimization</span>
+            <span class="badge">Accessibility</span>
+            <span class="badge">Web Security</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🌐 Other</h3>
+          <div class="badges">
+            <span class="badge">SMO</span>
+            <span class="badge">Figma</span>
+            <span class="badge">Canva</span>
+            <span class="badge">Adobe Illustrator</span>
+            <span class="badge">VN & Capcut</span>
           </div>
         </div>
       </div>
-      <div class="box others">
-        <h2>Others</h2>
-        <div class="grid small">
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/git.svg" alt="Git" />
-              <span>Git</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/github.png" alt="GitHub" />
-              <span>GitHub</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/vsc.svg" alt="VS Code" />
-              <span>VS Code</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/colab.png" alt="Google Colab" />
-              <span>Google Colab</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/netlify.svg" alt="Netlify" />
-              <span>Netlify</span>
-            </div>
-          </div>
-          <div class="item1">
-            <div class="skill-icon">
-              <img src="./assets/postman.svg" alt="Postman" />
-              <span>Postman</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    <script>
+      const canvas = document.getElementById("stars");
+      const ctx = canvas.getContext("2d");
+
+      let stars = [];
+      let starCount = 120;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      function createStars() {
+        stars = [];
+        for (let i = 0; i < starCount; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 1.5,
+            velocity: Math.random() * 0.3 + 0.1,
+            alpha: Math.random(),
+          });
+        }
+      }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+          ctx.fill();
+
+          star.y += star.velocity;
+          if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+          }
+        }
+        requestAnimationFrame(drawStars);
+      }
+
+      createStars();
+      drawStars();
+    </script>
   </body>
 </html>
