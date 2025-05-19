@@ -2,206 +2,416 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vidhi Rawat</title>
-    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidhi || Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 99vw;
+      }
+
+      .left {
+        flex: 1;
+        background-color: #1a1a2e; /* Blue-purple */
+        color: #d4ff52; /* Lime green text */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+        position: relative;
+      }
+
+      .left h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .left p {
+        color: #ffffff;
+        margin-top: 1.5rem;
+        max-width: 400px;
+        font-size: 1.3rem;
+      }
+
+      .resume-button {
+        background-color: #d4ff52; /* Lime green */
+        color: #1a1a2e; /* Blue-purple */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 20px; /* Add some space above the button */
+        transition: background-color 0.3s ease;
+      }
+
+      .resume-button:hover {
+        background-color: #697e38; /* Slightly darker lime green */
+      }
+
+      .highlights {
+        position: absolute;
+        bottom: 2rem;
+        left: 5rem;
+        display: flex;
+        gap: 4rem;
+        color: #c2f7e0;
+        font-size: 0.9rem;
+      }
+
+      .right {
+        flex: 1;
+        background-color: 1a1a2e;
+        position: relative;
+      }
+
+      .profile-pic {
+        position: absolute;
+        top: 50%;
+        left: -190px;
+        transform: translateY(-50%);
+        width: 420px;
+        height: 500px;
+        object-fit: cover;
+        padding: 12px;
+        animation: floatUpDown 3s ease-in-out infinite; /* Added animation */
+      }
+
+      @keyframes floatUpDown {
+        0% {
+          transform: translateY(-50%);
+        }
+        50% {
+          transform: translateY(calc(-50% - 20px)); /* Move up by 20px */
+        }
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 2em;
+        font-weight: bold;
+        color: #f0e9db;
+      }
+
+      .vertical-navbar {
+        position: relative;
+        top: 1em;
+        left: 36em;
+        height: 95vh;
+        width: 65px; /* You can adjust width */
+        background-color: #0f0f1a; /* Dark tone for aesthetic */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+
+      .vertical-navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .vertical-navbar ul li {
+        margin: 20px 0;
+      }
+
+      .vertical-navbar img {
+        width: 40px; /* Adjust icon size */
+        height: 40px;
+        transition: transform 0.3s, filter 0.3s;
+      }
+
+      .vertical-navbar a:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.5);
+      }
+
+      /* Decorative Elements */
+      .dot-grid {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-image: radial-gradient(#ffffff 1px, transparent 1px);
+        background-size: 10px 10px;
+        top: 160px;
+        left: 650px;
+        opacity: 0.7;
+      }
+
+      .zigzag {
+        position: absolute;
+        width: 60px;
+        height: 20px;
+        top: 74.5%;
+        left: 650px;
+        transform: translateY(-50%);
+      }
+
+      .zigzag::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          135deg,
+          transparent 45%,
+          #d4ff52 45%,
+          #d4ff52 55%,
+          transparent 55%
+        );
+        background-size: 20px 20px;
+      }
+
+      .right .dot-block {
+        position: absolute;
+        bottom: 3rem;
+        right: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 8px);
+        gap: 10px;
+      }
+
+      .right .dot-block div {
+        width: 8px;
+        height: 8px;
+        background-color: #3a3a68;
+      }
+
+      .main {
+        background-color: 0f0f1a;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #0f0f1a;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .left,
+        .right {
+          flex: none;
+          width: 100%;
+          padding: 2rem;
+        }
+
+        .vertical-navbar {
+          position: sticky;
+          height: 40vh;
+        }
+
+        .profile-pic {
+          position: absolute;
+          top: 45%;
+          left: 0px;
+          margin-left: 40px;
+          transform: translateY(-50%);
+          width: 220px;
+          height: 300px;
+          object-fit: cover;
+          padding: 12px;
+          animation: floatUpDown 3s ease-in-out infinite;
+        }
+
+        .highlights {
+          flex-direction: column;
+          position: static;
+          margin-top: 2rem;
+        }
+        .dot-grid,
+        .zigzag,
+        .dot-block,
+        .step-line {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- NavBar-->
-    <header class="header">
-      <div class="logo">Vidhi Rawat</div>
-
-      <nav class="social-links">
-        <a
-          href="mailto:vidhirawat54@gmail.com"
-          target="_blank"
-          class="social-icon"
-        >
-          <img src="assets/gmail.svg" alt="Email" />
-        </a>
-        <a
-          href="https://github.com/vidhirawat10"
-          target="_blank"
-          class="social-icon"
-        >
-          <img src="assets/github.svg" alt="GitHub" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/vidhi-rawat-8a795928b/"
-          target="_blank"
-          class="social-icon"
-        >
-          <img src="assets/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a
-          href="https://x.com/vidhirawat_10"
-          target="_blank"
-          class="social-icon"
-        >
-          <img src="assets/twitter.svg" alt="Twitter" />
-        </a>
-        <a
-          href="https://www.instagram.com/v_idhiii_10?igsh=ZWs5aGhvd3R5OTBt"
-          target="_blank"
-          class="social-icon"
-        >
-          <img src="assets/instagram.svg" alt="Instagram" />
-        </a>
-      </nav>
-
-      <a href="assets/Vidhi Rawat-Resume.pdf" target="_blank" class="buy-btn"
-        >RESUME</a
-      >
-    </header>
-
-    <!--Section 1-->
-    <section class="section-1">
-      <div class="text-box">
-        <div class="edu-header">
-          <h1>Education</h1>
-          <img src="assets/edu.svg" alt="Education Icon" class="edu-icon" />
+    <canvas id="stars"></canvas>
+    <section class="intro">
+    <div class="container">
+      <div class="left">
+        <div class="logo">
+          Vidhi |<span style="color: #c2f7e0">| Portfolio</span>
         </div>
-        <h2>
-          <i
-            >My academic background<Br>and the milestones<br>that shaped my
-            foundation.</i
-          >
-        </h2>
-        <a href="education.html" class="edu-btn" title="Go to Education Page"
-          >→</a
+        <br /><br />
+        <h1><span id="typed-text"></span></h1>
+        <p>
+          I like to craft solid and scalable frontend products with great user
+          experiences and the best analytical solutions.
+        </p>
+        <br />
+        <a
+          href="assets/Vidhi Rawat-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-      </div>
-
-      <div class="image-box">
-        <img src="./assets/profile.jpg" alt="Profile Image" />
-        <a href="about.html" class="hover-button" title="About Me">
-          <svg
-            width="64px"
-            height="64px"
-            viewBox="0 0 512.00 512.00"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            fill="#000000"
-            stroke="#000000"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0">
-              <rect
-                x="0"
-                y="0"
-                width="512.00"
-                height="512.00"
-                rx="256"
-                fill="#000000"
-                strokewidth="0"
-              ></rect>
-            </g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <title>about-filled</title>
-              <g
-                id="Page-1"
-                stroke="none"
-                stroke-width="1"
-                fill="none"
-                fill-rule="evenodd"
-              >
-                <g
-                  id="drop"
-                  fill="#f6eedf"
-                  transform="translate(42.666667, 42.666667)"
-                >
-                  <path
-                    d="M213.333333,3.55271368e-14 C331.154987,3.55271368e-14 426.666667,95.51168 426.666667,213.333333 C426.666667,331.153707 331.154987,426.666667 213.333333,426.666667 C95.51296,426.666667 3.55271368e-14,331.153707 3.55271368e-14,213.333333 C3.55271368e-14,95.51168 95.51296,3.55271368e-14 213.333333,3.55271368e-14 Z M234.713387,192 L192.04672,192 L192.04672,320 L234.713387,320 L234.713387,192 Z M213.55008,101.333333 C197.99616,101.333333 186.713387,112.5536 186.713387,127.704107 C186.713387,143.46752 197.698773,154.666667 213.55008,154.666667 C228.785067,154.666667 240.04672,143.46752 240.04672,128 C240.04672,112.5536 228.785067,101.333333 213.55008,101.333333 Z"
-                    id="Shape"
-                  ></path>
-                </g>
-              </g>
-            </g>
-          </svg>
+          <button class="resume-button">Resume</button>
         </a>
-      </div>
-            <div class="certifications">
-        <div class="edu-header">
-          <h1>Certifications</h1>
-          <img src="assets/certification.svg" alt="Education Icon" class="c-icon" />
+        <div class="highlights">
+          <div>
+            Proficient in data analysis, visualization, and extracting
+            actionable insights.
+          </div>
+          <div>
+            Experienced in developing and deploying user-friendly frontend
+            solutions for diverse audiences..
+          </div>
         </div>
-        <h2>
-          <i>A snapshot of my technical toolkit<br>and creative abilities.</i>
-          <a href="certification.html" class="c-btn" title="Go to Education Page"
-          >→</a
-        >
-        </h2>
+        <div class="dot-grid"></div>
+        <div class="zigzag"></div>
       </div>
-      <div class="skills">
-        <div class="edu-header">
-          <h1>Skills</h1>
-          <img src="assets/skill.svg" alt="Education Icon" class="edu-icon" />
+      <div class="right">
+        <img
+          src="assets/profile2222.png"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <div class="vertical-navbar">
+          <ul>
+            <li>
+              <a href="mailto:vidhirawat54@gmail.com" aria-label="Email"
+                ><img src="assets/gmail.svg" alt="email"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/vidhirawat10"
+                ><img src="assets/github.svg" alt="github"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/vidhi-rawat-8a795928b/"
+                ><img src="assets/linkedin.svg" alt="linkedin"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/v_idhiii_10?igsh=ZWs5aGhvd3R5OTBt"
+                ><img src="assets/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="https://x.com/vidhirawat_10"
+                ><img src="assets/twitter.svg" alt="X"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <h2>
-          <i>A snapshot of my technical toolkit<br>and creative abilities.</i>
-          <a href="skills.html" class="sk-btn" title="Go to Education Page"
-          >→</a
-        >
-        </h2>
+        <div class="dot-block">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
+    </div>
     </section>
+    <section class="main"></section>
 
-    <!--Section 2-->
-    <section class="section-2">
-      <div class="text-box2">
-        <div class="edu-header">
-          <h1>Achievements</h1>
-          <img src="assets/achievements.svg" alt="Education Icon" class="edu-icon" />
-        </div>
-        <h2>
-          <i
-            >Highlights of<br>accomplishments that<br>reflects my dedication<br>and
-            drive.</i
-          >
-          <a href="achievements.html" class="ex-btn" title="Go to Education Page"
-          >→</a
-        >
-        </h2>
-      </div>
-      <div class="text-box2-2">
-        <div class="edu-header">
-          <h1>Experience</h1>
-          <img src="assets/experience.svg" alt="Education Icon" class="edu-icon" />
-        </div>
-        <h2>
-          <i
-            >Hands-on learning and<br>real-world exposure from internships and
-            collaborations.</i
-          >
-          <a href="experience.html" class="ex-btn" title="Go to Education Page"
-          >→</a>
-        </h2>
-      </div>
-      <div class="projects">
-        <div class="edu-header">
-          <h1>Projects</h1>
-          <img src="assets/project.svg" alt="Education Icon" class="edu-icon" />
-        </div>
-        <h2>
-          <i
-            >A showcase of the ideas<br>I’ve brought to life through code<br>and
-            innovation.</i
-          >
-         <a href="projects.html" class="edu-btn" title="Go to Education Page"
-          >→</a
-        >
-        </h2>
-      </div>
-    </section>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      const canvas = document.getElementById("stars");
+      const ctx = canvas.getContext("2d");
 
-    <!-- Footer -->
-    <footer class="footer">
-      <h3>-- made by vidhi :) --</h3>
-    </footer>
+      let stars = [];
+      let starCount = 120;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      function createStars() {
+        stars = [];
+        for (let i = 0; i < starCount; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            // Increased radius for bigger stars
+            radius: Math.random() * 1 + 1,
+            // Increased velocity for faster falling
+            velocity: Math.random() * 0.5 + 0.2,
+            alpha: Math.random(),
+          });
+        }
+      }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+          ctx.fill();
+
+          star.y += star.velocity;
+          if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+          }
+        }
+        requestAnimationFrame(drawStars);
+      }
+
+      createStars();
+      drawStars();
+
+      var typed = new Typed("#typed-text", {
+        strings: [
+          "Fronted Developer",
+          "Data Science Aficionado",
+          "UI/UX Enthusiast",
+        ],
+        typeSpeed: 40,
+        backSpeed: 30,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+      });
+    </script>
   </body>
 </html>
