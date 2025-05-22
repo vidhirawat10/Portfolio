@@ -251,7 +251,7 @@
         .vertical-navbar {
          position: absolute;
         height: 47vh;
-        left: 430px;
+        left: 325px;
         top: -680px;
         }
 
@@ -428,12 +428,15 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .container2 {
-    margin-left: 0px;
+    margin-left: -20px;
     flex-direction: column;
     text-align: center;
   }
 
-  
+  .left2 {
+  flex: 1;
+  max-width: 350px;
+}
 
   .right2 {
   flex: 1;
@@ -442,6 +445,7 @@
   justify-content: center;
   align-items: center;
   min-height: 250px;
+  max-width: 400px;
   }
 
   .card2 {
@@ -461,7 +465,8 @@
   border-radius: 20px;
   margin-bottom: 10px;
   width: 100px;
-  margin-left: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
   cursor: pointer;
 }
 
@@ -475,27 +480,28 @@
 }
 
 .card2.tall {
-  left: 135px;
-  top: -20px;
+  left: 85px;
+  top: 80px;
   transform: translateY(-50%);
-  height: 250px;
-  width: 220px;
+  height: 350px;
+  width: 500px;
   transition: border-color 0.3s ease, transform 0.3s ease;
   animation: growIn 0.8s forwards;
 }
 
 .card2.small {
-  right: -130px;
-  top: -240px;
+  right: -85px;
+  top: -225px;
   width: 220px;
-  height: 240px;
+  height: 300px;
 }
 
 .card2.regular {
-  right: 120px;
-  bottom: -30px;
+  right: 80px;
+  bottom: -100px;
   width: 220px;
-  height: 240px;
+  height: 260px;
+  margin-right: 20px;
 }
 
 }
