@@ -12,7 +12,7 @@
 
       .container {
         display: flex;
-        height: 100vh;
+        height: 105vh;
         width: 99vw;
       }
 
@@ -233,8 +233,8 @@
         }
 
       .left h1 {
-        height: 27vh;
-        font-size: 3.7rem;
+        height: 30vh;
+        font-size: 3.5rem;
         margin-top: 65px;
         font-weight: 800;
         line-height: 1.2;
@@ -261,7 +261,7 @@
           flex-direction: column;
           position: static;
           margin-top: 1rem;
-          gap: 2px;
+          gap: 1px;
         }
         .dot-grid,
         .zigzag,
