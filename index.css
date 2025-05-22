@@ -262,6 +262,7 @@
           position: static;
           margin-top: 1rem;
           gap: 1.5px;
+          font-size: 0.7rem;
         }
         .dot-grid,
         .zigzag,
