@@ -436,6 +436,7 @@
   .left2 {
   flex: 1;
   max-width: 350px;
+  margin-left: 15px;
 }
 
   .right2 {
