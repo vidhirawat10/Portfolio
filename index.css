@@ -436,7 +436,7 @@
   .left2 {
   flex: 1;
   max-width: 350px;
-  margin-left: 15px;
+  margin-left: 18px;
 }
 
   .right2 {
@@ -445,6 +445,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 18px;
   min-height: 250px;
   max-width: 400px;
   }
