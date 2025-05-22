@@ -261,7 +261,7 @@
           flex-direction: column;
           position: static;
           margin-top: 1rem;
-          gap: 1px;
+          gap: 1.5px;
         }
         .dot-grid,
         .zigzag,
