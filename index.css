@@ -235,7 +235,7 @@
       .left h1 {
         height: 27vh;
         font-size: 3.7rem;
-        margin-top: 50px;
+        margin-top: 65px;
         font-weight: 800;
         line-height: 1.2;
       }
@@ -260,7 +260,8 @@
         .highlights {
           flex-direction: column;
           position: static;
-          margin-top: 2rem;
+          margin-top: 1rem;
+          gap: 2px;
         }
         .dot-grid,
         .zigzag,
