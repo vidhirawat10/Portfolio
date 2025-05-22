@@ -436,7 +436,7 @@
   .left2 {
   flex: 1;
   max-width: 350px;
-  margin-left: 18px;
+  margin-left: 15px;
 }
 
   .right2 {
@@ -445,7 +445,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 18px;
   min-height: 250px;
   max-width: 400px;
   }
@@ -474,8 +473,8 @@
 
 .card2 p {
   margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
@@ -503,8 +502,6 @@
   bottom: -100px;
   width: 220px;
   height: 260px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 }
@@ -525,13 +522,13 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #555;
+  color: #d4ff52;
 }
 
 .intro {
   font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #777;
+  color: whitesmoke;
 }
 
 .card-container3 {
@@ -697,4 +694,3 @@ h2 {
         padding: 30px;
     }
 }
-
