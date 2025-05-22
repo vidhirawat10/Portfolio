@@ -251,7 +251,7 @@
         .vertical-navbar {
          position: absolute;
         height: 47vh;
-        left: 250px;
+        left: 270px;
         top: -680px;
         }
 
@@ -483,7 +483,7 @@
   left: 85px;
   top: 80px;
   transform: translateY(-50%);
-  height: 330px;
+  height: 300px;
   width: 500px;
   transition: border-color 0.3s ease, transform 0.3s ease;
   animation: growIn 0.8s forwards;
