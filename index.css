@@ -691,6 +691,11 @@ h2 {
 
     .left-section,
     .right-section {
-        padding: 30px;
+        padding: 0px;
+        margin-right: 25px;
+    }
+
+    .left-section img{
+      display: none;
     }
 }
