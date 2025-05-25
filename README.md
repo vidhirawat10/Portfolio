@@ -60,11 +60,11 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 🧠 Skills - Tools, languages & frameworks
 
 📨 Contact - Get in touch with me!
-
+---
 ## 🧑‍🎨 Designed & Developed By
 Vidhi Rawat
 📍 Noida, India
-
+---
 <br>
 
 <p align="center">✨ Built with love & dreams by Vidhi ✨</p> ``
