@@ -50,7 +50,7 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 | Deployment   | `Vercel` / `GitHub Pages`                        |
 
 ---
-#📸 Sections
+## 📸 Sections
 🏠 Home - Quick intro & call-to-action
 
 👩‍🎓 About Me - My journey, education & goals
@@ -61,8 +61,10 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 
 📨 Contact - Get in touch with me!
 
-#🧑‍🎨 Designed & Developed By
+## 🧑‍🎨 Designed & Developed By
 Vidhi Rawat
 📍 Noida, India
+
+<br>
 
 <p align="center">✨ Built with love & dreams by Vidhi ✨</p> ``
