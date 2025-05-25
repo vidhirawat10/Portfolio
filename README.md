@@ -16,7 +16,7 @@
 
 ![Portfolio Demo](https://your-image-or-gif-url.com/demo.gif)
 
-🔗 **Live Website:** [https://your-portfolio-link.com](https://your-portfolio-link.com)
+🔗 **Live Website:** [https://vidhi-portfolio.vercel.app/](https://vidhi-portfolio.vercel.app/)
 
 ---
 
@@ -46,8 +46,8 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 
 | Category     | Tools Used                                      |
 |--------------|-------------------------------------------------|
-| Frontend     | `React.js`, `HTML5`, `CSS3`, `JavaScript`       |
-| Styling      | `TailwindCSS`, `Framer Motion`, `Responsive UI` |
+| Frontend     | `HTML5`, `CSS3`, `JavaScript`       |
+| Styling      | `TailwindCSS`, `Responsive UI` |
 | Deployment   | `Vercel` / `GitHub Pages`                        |
 
 ---
