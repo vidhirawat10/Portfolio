@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Live-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Built%20With-React.js-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Deployed-Vercel-000?style=for-the-badge" />
 </p>
 
