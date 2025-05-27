@@ -51,19 +51,20 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 
 ---
 ## 📸 Sections
-🏠 Home - Quick intro & call-to-action
+- 🏠 Home - Quick intro & call-to-action
 
-👩‍🎓 About Me - My journey, education & goals
+- 👩‍🎓 About Me - My journey, education & goals
 
-💻 Projects - Real-world ML & Web Dev showcases
+- 💻 Projects - Real-world ML & Web Dev showcases
 
-🧠 Skills - Tools, languages & frameworks
+- 🧠 Skills - Tools, languages & frameworks
 
-📨 Contact - Get in touch with me!
+- 📨 Contact - Get in touch with me!
+  
 ---
+
 ## 🧑‍🎨 Designed & Developed By
-Vidhi Rawat
-📍 Noida, India
+- Vidhi Rawat
 ---
 <br>
 
