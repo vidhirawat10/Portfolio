@@ -86,15 +86,15 @@ html {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: splashShrink 2s ease-in-out forwards;
+  animation: splashShrink 5s ease-in-out forwards;
 }
 
 .splash-image {
   width: 60vw;
   max-width: 600px;
   height: auto;
-    top: 45%;
-  left: -220px;
+  top: 45%;
+  left: 50px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   transform-origin: center;
@@ -126,7 +126,7 @@ html {
 .profile-pic {
   position: absolute;
   top: 45%;
-  left: -220px;
+  left: 50px;
   transform: translateY(-50%) scale(0.9) rotate(-25deg);
   transform-origin: center center;
   width: 502px;
@@ -139,8 +139,8 @@ html {
 
 .pin {
   position: absolute;
-  top: 185px;
-  left: -5%;
+  top: 260px;
+  left: 10%;
   transform: translateX(-50%) rotate(-70deg); /* rotate back to cancel the container tilt */
   font-size: 32px;
   z-index: 2;
@@ -196,12 +196,12 @@ html {
 /* Decorative Elements */
 .dot-grid {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 1px);
   background-size: 10px 10px;
-  top: 160px;
-  left: 700px;
+  top: 200px;
+  left: 800px;
   opacity: 0.7;
 }
 
@@ -305,8 +305,8 @@ html {
     top: -680px;
   }
 
-  .profile-pic {
-    display: none;
+  .profile-pic, .pin {
+    display:none;
   }
 
   .highlights {
