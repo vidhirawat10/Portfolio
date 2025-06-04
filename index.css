@@ -73,6 +73,56 @@ html {
   position: relative;
 }
 
+/* Splash screen styles */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: splashShrink 2s ease-in-out forwards;
+}
+
+.splash-image {
+  width: 60vw;
+  max-width: 600px;
+  height: auto;
+    top: 45%;
+  left: -220px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform-origin: center;
+  animation: splashImageMove 3s ease-in-out forwards;
+}
+
+/* Animation to shrink and move */
+@keyframes splashImageMove {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(-50%) scale(0.9) rotate(-25deg);
+  }
+}
+
+/* Fade out splash container */
+@keyframes splashShrink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
 .profile-pic {
   position: absolute;
   top: 45%;
@@ -83,8 +133,9 @@ html {
   height: 305px;
   object-fit: cover;
   padding: 12px;
-  animation: floatIn 1.5s ease-out forwards;
+   /* animation: floatIn 1.5s ease-out forwards; */
 }
+
 
 .pin {
   position: absolute;
@@ -95,16 +146,6 @@ html {
   z-index: 2;
 }
 
-@keyframes floatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(0.95); /* starts lower and slightly smaller */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-50%) scale(0.9) rotate(-25deg);
-  }
-}
 
 .logo {
   position: absolute;
