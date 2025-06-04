@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+   
+<div class="splash-screen" id="splash">
+  <img src="assets/developers.js.png" alt="Splash Developer Image" class="splash-image" />
+</div>
+
     <canvas id="stars"></canvas>
     <section class="intro">
       <div class="container">
@@ -233,6 +238,14 @@
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+
+      
+  // Remove splash after animation ends
+  setTimeout(() => {
+    document.getElementById("splash").style.display = "none";
+  }, 2100); // match the animation duration
+
+
       const canvas = document.getElementById("stars");
       const ctx = canvas.getContext("2d");
 
