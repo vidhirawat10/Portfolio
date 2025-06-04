@@ -83,7 +83,7 @@ html {
   height: 305px;
   object-fit: cover;
   padding: 12px;
-  /* animation: floatUpDown 3s ease-in-out infinite;  Added animation */
+  animation: floatIn 1.5s ease-out forwards;
 }
 
 .pin {
@@ -95,15 +95,14 @@ html {
   z-index: 2;
 }
 
-@keyframes floatUpDown {
+@keyframes floatIn {
   0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(calc(-50% - 20px)); /* Move up by 20px */
+    opacity: 0;
+    transform: translateY(100px) scale(0.95); /* starts lower and slightly smaller */
   }
   100% {
-    transform: translateY(-50%);
+    opacity: 1;
+    transform: translateY(-50%) scale(0.9) rotate(-25deg);
   }
 }
 
