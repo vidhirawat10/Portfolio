@@ -78,49 +78,48 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #0d0d0d;
+  background-color: #1a1a2e;
   width: 100vw;
   height: 100vh;
   z-index: 9999;
   display: flex;
+  display: flex;
+  flex-direction: column; /* Stack vertically */
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: splashShrink 5s ease-in-out forwards;
 }
+
+.hello-text {
+  font-size: 4rem;
+  font-weight: 800px;
+  color: #c2f7e0;
+  animation: changeHello 1ms steps(1) infinite;
+  margin-top: -300px;
+  margin-bottom: 40px;
+}
+
+@keyframes changeHello {
+  0%   { content: "Hello"; }
+  20%  { content: "नमस्ते"; }
+  40%  { content: "Bonjour"; }
+  60%  { content: "Hola"; }
+  80%  { content: "Ciao"; }
+  100% { content: "Hello"; }
+}
+
+/* Instead, we'll switch innerText via JS for smoother control */
 
 .splash-image {
-  width: 60vw;
-  max-width: 600px;
+  position: absolute;
+  width: 500px;
   height: auto;
-  top: 45%;
-  left: 50px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  transform-origin: center;
-  animation: splashImageMove 3s ease-in-out forwards;
+    top: 43%;
+    left: 530px;
+  transition: all 1s ease-in-out;
+  z-index: 2;
 }
 
-/* Animation to shrink and move */
-@keyframes splashImageMove {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: translateY(-50%) scale(0.9) rotate(-25deg);
-  }
-}
-
-/* Fade out splash container */
-@keyframes splashShrink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 
 
 .profile-pic {
