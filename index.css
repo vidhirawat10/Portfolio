@@ -309,7 +309,7 @@ html {
   }
 
   .hello-text {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 800px;
   color: #c2f7e0;
   animation: changeHello 1ms steps(1) infinite;
