@@ -66,4 +66,4 @@ Hey there! I'm **Vidhi Rawat**, a passionate:
 ---
 <br>
 
-<p align="center">✨ Built with love & dreams by Vidhi ✨</p> 
+<p align="center">✨ Built with 💕 ✨</p> 
