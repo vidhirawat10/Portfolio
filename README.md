@@ -13,8 +13,6 @@
 
 ## 🖼️ Preview
 
-![Portfolio Demo](https://your-image-or-gif-url.com/demo.gif)
-
 🔗 **Live Website:** [https://vidhi-portfolio.vercel.app/](https://vidhi-portfolio.vercel.app/)
 
 ---
